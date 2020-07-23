@@ -1,4 +1,4 @@
-# MIT_windows_95_key_generator
+# MIT windows 95 key generator
 Opensource generator of keys for Microsoft Windows 95
 
 ### Compiling
