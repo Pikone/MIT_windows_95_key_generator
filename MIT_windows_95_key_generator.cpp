@@ -4,6 +4,8 @@
 
 int main (int argc, char *argv[])
 {
+	if (argc == 1)
+		argv[1] = "1";
 	srand(time(0));
 	int key_p1, key_p2[8] = {95, 96, 97, 98, 99, 01, 02, 03}, key_p3[7];
 
