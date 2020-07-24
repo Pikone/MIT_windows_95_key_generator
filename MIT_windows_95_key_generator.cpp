@@ -9,7 +9,6 @@ class KeyGen
 {
     std::string key, n1, n2, n3;
 
-<<<<<<< HEAD
     int numOfKeys;
 
     void makeN1();
