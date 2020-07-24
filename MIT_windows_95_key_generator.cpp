@@ -9,6 +9,7 @@ class KeyGen
 {
     std::string key, n1, n2, n3;
 
+<<<<<<< HEAD
     int numOfKeys;
 
     void makeN1();
@@ -64,12 +65,36 @@ void KeyGen::makeN2()
 	do{
 		valid = 0;
 		for (int i = 0; i < 7; i++)
-		{
-			key_p3[i] = rand() % 10;
-			valid += key_p3[i];
-		}
-	}while(valid % 7 != 0);
+=======
+	int i, valid;
 
+	printf("%d keys\n", atoi(argv[1]));
+
+	for(int u = 0; u < atoi(argv[1]); u++)
+	{
+		key_p1 = rand() % 366;
+		key_p2 = rand() % 5 + 95;
+
+		do{
+			valid = 0;
+			for (i = 0; i < 7; i++)
+			{
+				key_p3[i] = rand() % 10;
+				valid += key_p3[i];
+			}
+		}while(valid % 7 != 0);
+
+		if (key_p1 < 100)
+>>>>>>> 096131dc13322ef64edfde1893accd32d000635e
+		{
+			std::cout << 0;
+			if (key_p1 < 10)
+			{
+				std::cout << 0;
+			}
+		}
+
+<<<<<<< HEAD
     for(int i = 0; i < 7; i++)
         n2 += std::to_string(key_p3[i]);
 }
@@ -84,6 +109,22 @@ void KeyGen::makeN3()
         n3 += std::to_string(key_p4[i]);
     }
 }
+=======
+		std::cout << key_p1 << key_p2 << "-OEM-0";
+
+		for (i = 0; i < 7; i++)
+			std::cout << key_p3[i];
+
+		std::cout << "-";
+
+		for (i = 0; i < 5; i++)
+		{
+			key_p4[i] = rand() % 10;
+			std::cout << key_p4[i];
+		}
+		std::cout << std::endl;
+	}
+>>>>>>> 096131dc13322ef64edfde1893accd32d000635e
 
 int main (int argc, char *argv[])
 {
