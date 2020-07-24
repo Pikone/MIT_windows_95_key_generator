@@ -13,7 +13,7 @@ int main (int argc, char *argv[])
 
 	for(int u = 0; u < atoi(argv[1]); u++)
 	{
-		key_p1 = rand() % 266 + 100;
+		key_p1 = rand() % 366;
 		key_p2 = rand() % 5 + 95;
 
 		do{
@@ -24,6 +24,15 @@ int main (int argc, char *argv[])
 				valid += key_p3[i];
 			}
 		}while(valid % 7 != 0);
+
+		if (key_p1 < 100)
+		{
+			std::cout << 0;
+			if (key_p1 < 10)
+			{
+				std::cout << 0;
+			}
+		}
 
 		std::cout << key_p1 << key_p2 << "-OEM-0";
 
