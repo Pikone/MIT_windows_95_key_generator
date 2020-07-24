@@ -64,7 +64,7 @@ void KeyGen::makeN2()
 	do{
 		valid = 0;
 		for (int i = 0; i < 7; i++)
-=======
+			
 	int i, valid;
 
 	printf("%d keys\n", atoi(argv[1]));
@@ -84,7 +84,6 @@ void KeyGen::makeN2()
 		}while(valid % 7 != 0);
 
 		if (key_p1 < 100)
->>>>>>> 096131dc13322ef64edfde1893accd32d000635e
 		{
 			std::cout << 0;
 			if (key_p1 < 10)
@@ -93,7 +92,6 @@ void KeyGen::makeN2()
 			}
 		}
 
-<<<<<<< HEAD
     for(int i = 0; i < 7; i++)
         n2 += std::to_string(key_p3[i]);
 }
@@ -108,7 +106,6 @@ void KeyGen::makeN3()
         n3 += std::to_string(key_p4[i]);
     }
 }
-=======
 		std::cout << key_p1 << key_p2 << "-OEM-0";
 
 		for (i = 0; i < 7; i++)
@@ -123,7 +120,6 @@ void KeyGen::makeN3()
 		}
 		std::cout << std::endl;
 	}
->>>>>>> 096131dc13322ef64edfde1893accd32d000635e
 
 int main (int argc, char *argv[])
 {
